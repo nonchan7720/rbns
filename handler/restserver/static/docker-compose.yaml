@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  rbac-ui-dev:
+    build: .devcontainer
+    tty: true
+    container_name: rbac-ui-dev
+    volumes:
+      - .:/src/:delegated
+      - ~/.ssh:/root/.ssh
+      - ~/.gitconfig:/root/.gitconfig
+      - rbac-ui-ui-cache:/usr/local/share/.cache
+      - rbac-ui-ui-node_modules:/src/node_modules
+      - ../../../.git/:/src/.git/
+    environment:
+      TZ: Asia/Tokyo
+    networks:
+      - proxy-server-net
+networks:
+  default:
+    name: bridge
+  proxy-server-net:
+    name: proxy-server-net
+    driver: bridge
+volumes:
+  rbac-ui-ui-node_modules:
+    driver: local
+  rbac-ui-ui-cache:
+    driver: local

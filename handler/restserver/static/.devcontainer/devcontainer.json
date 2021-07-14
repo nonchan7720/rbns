@@ -1,0 +1,20 @@
+{
+    "name": "rbac-ui-dev",
+    "dockerComposeFile": [
+        "../docker-compose.yaml"
+    ],
+    "service": "rbac-ui-dev",
+    "workspaceFolder": "/src",
+    "settings": {
+        "terminal.integrated.shell.linux": null
+    },
+    "extensions": [
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "mubaidr.vuejs-extension-pack",
+        "syler.sass-indented",
+        "esbenp.prettier-vscode",
+        "christian-kohler.path-intellisense",
+        "streetsidesoftware.code-spell-checker"
+    ],
+}
