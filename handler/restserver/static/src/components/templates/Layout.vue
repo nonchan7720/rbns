@@ -9,7 +9,10 @@
       </v-app-bar-nav-icon>
 
       <v-toolbar-title>
-        <v-btn class="tfn text-h6" text to="/">Role Based Access Control</v-btn>
+        <router-link to="/">
+          <v-img :src="require('@/assets/logo.svg')"></v-img>
+        </router-link>
+        <!-- <v-btn class="tfn text-h6" text to="/">Role Based Access Control</v-btn> -->
       </v-toolbar-title>
 
       <v-spacer></v-spacer>

@@ -10,7 +10,6 @@ services:
       - ~/.gitconfig:/root/.gitconfig
       - rbac-ui-ui-cache:/usr/local/share/.cache
       - rbac-ui-ui-node_modules:/src/node_modules
-      - ../../../.git/:/src/.git/
     environment:
       TZ: Asia/Tokyo
     networks:

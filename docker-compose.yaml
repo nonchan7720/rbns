@@ -1,0 +1,52 @@
+version: "3.8"
+services:
+  api-rbac-dev:
+    build: .devcontainer
+    tty: true
+    container_name: api-rbac-dev
+    volumes:
+      - .:/src/:delegated
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.ssh:/root/.ssh
+      - ~/.gitconfig:/root/.gitconfig
+    environment:
+      TZ: Asia/Tokyo
+    networks:
+      - ceap-net
+      - proxy-server-net
+  api-rbac-postgres-dev:
+    image: postgres:11-alpine
+    networks:
+      - proxy-server-net
+    container_name: api-rbac-postgres-dev
+    volumes:
+      - ./db:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_USER: rbac-user
+      POSTGRES_PASSWORD: rbac-user
+      TZ: Asia/Tokyo
+    ports:
+      - 58383:5432
+  api-rbac-mysql-dev:
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - proxy-server-net
+    container_name: api-rbac-mysql-dev
+    environment:
+      MYSQL_ROOT_PASSWORD: rbac-root
+      MYSQL_USER: rbac-user
+      MYSQL_PASSWORD: rbac-user
+      MYSQL_DATABASE: rbac-db
+      TZ: Asia/Tokyo
+    ports:
+      - 58384:3306
+networks:
+  default:
+    name: bridge
+  ceap-net:
+    name: ceap-net
+    driver: bridge
+  proxy-server-net:
+    name: proxy-server-net
+    driver: bridge
