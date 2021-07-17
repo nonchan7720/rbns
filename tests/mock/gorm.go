@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/n-creativesystem/api-rbac/infra/dao"
+	"github.com/n-creativesystem/rbnc/infra/dao"
 	"github.com/sirupsen/logrus"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

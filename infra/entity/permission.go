@@ -1,6 +1,6 @@
 package entity
 
-import "github.com/n-creativesystem/api-rbac/domain/model"
+import "github.com/n-creativesystem/rbnc/domain/model"
 
 type Permission struct {
 	Model

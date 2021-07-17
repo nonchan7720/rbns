@@ -17,8 +17,10 @@ func (i *items) Set(value string) error {
 }
 
 type webUI struct {
-	enable bool
-	prefix string
+	enable  bool
+	prefix  string
+	root    string
+	indexes bool
 }
 
 type databaseConfig struct {

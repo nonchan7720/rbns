@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/n-creativesystem/api-rbac/infra/dao"
-	"github.com/n-creativesystem/api-rbac/tests/mock"
+	"github.com/n-creativesystem/rbnc/infra/dao"
+	"github.com/n-creativesystem/rbnc/tests/mock"
 )
 
 var IDs = []string{"01FA2P4T4V2FANWFBV1DFWJ8VY",

@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/n-creativesystem/api-rbac/handler/restserver/internal/file"
+	"github.com/n-creativesystem/rbnc/handler/restserver/internal/file"
 )
 
 func staticServe(urlPrefix string, fs file.ServeFileSystem) gin.HandlerFunc {

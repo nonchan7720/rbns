@@ -11,12 +11,12 @@ import (
 	"time"
 
 	"github.com/joho/godotenv"
-	"github.com/n-creativesystem/api-rbac/handler/grpcserver"
-	"github.com/n-creativesystem/api-rbac/handler/restserver"
-	"github.com/n-creativesystem/api-rbac/infra"
-	"github.com/n-creativesystem/api-rbac/infra/dao"
-	"github.com/n-creativesystem/api-rbac/logger"
-	"github.com/n-creativesystem/api-rbac/utilsconv"
+	"github.com/n-creativesystem/rbnc/handler/grpcserver"
+	"github.com/n-creativesystem/rbnc/handler/restserver"
+	"github.com/n-creativesystem/rbnc/infra"
+	"github.com/n-creativesystem/rbnc/infra/dao"
+	"github.com/n-creativesystem/rbnc/logger"
+	"github.com/n-creativesystem/rbnc/utilsconv"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/sync/errgroup"
 	"google.golang.org/grpc"
@@ -118,7 +118,7 @@ func runRest(ctx context.Context, li net.Listener, db dao.DataBase) error {
 	if whiteList != "" {
 		opts = append(opts, restserver.WithWhiteList(whiteList))
 	}
-	opts = append(opts, restserver.WithUI(ui.enable, ui.prefix))
+	opts = append(opts, restserver.WithUI(ui.enable, ui.prefix, ui.root, ui.indexes))
 	restSrv := restserver.New(conn, opts...)
 	httpServer := &http.Server{
 		Handler:      restSrv,

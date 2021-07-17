@@ -3,24 +3,13 @@
 package restserver
 
 import (
-	"flag"
 	"net/http"
 	"os"
 	"path"
 	"strings"
 
-	"github.com/n-creativesystem/api-rbac/handler/restserver/internal/file"
+	"github.com/n-creativesystem/rbnc/handler/restserver/internal/file"
 )
-
-var (
-	root    string
-	indexes bool
-)
-
-func init() {
-	flag.StringVar(&root, "staticRoot", "./static/dist", "web ui static root")
-	flag.BoolVar(&indexes, "staticIndexes", false, "web ui static allow indexes")
-}
 
 const INDEX = "index.html"
 

@@ -1,6 +1,6 @@
 package service
 
-import "github.com/n-creativesystem/api-rbac/domain/repository"
+import "github.com/n-creativesystem/rbnc/domain/repository"
 
 type ApiKey interface {
 	Generate() (string, error)

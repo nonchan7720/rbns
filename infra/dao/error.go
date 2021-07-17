@@ -1,6 +1,6 @@
 package dao
 
-import "github.com/n-creativesystem/api-rbac/infra/dao/driver/postgres"
+import "github.com/n-creativesystem/rbnc/infra/dao/driver/postgres"
 
 func NewDBErr(err error) error {
 	switch dialector {

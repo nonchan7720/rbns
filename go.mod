@@ -1,4 +1,4 @@
-module github.com/n-creativesystem/api-rbac
+module github.com/n-creativesystem/rbnc
 
 go 1.16
 

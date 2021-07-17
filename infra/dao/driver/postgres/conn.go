@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/jackc/pgconn"
-	"github.com/n-creativesystem/api-rbac/domain/model"
+	"github.com/n-creativesystem/rbnc/domain/model"
 	"google.golang.org/grpc/status"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

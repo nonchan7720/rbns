@@ -7,12 +7,7 @@ import (
 	"io/fs"
 	"net/http"
 
-	"github.com/n-creativesystem/api-rbac/handler/restserver/internal/file"
-)
-
-var (
-	root    string
-	indexes bool
+	"github.com/n-creativesystem/rbnc/handler/restserver/internal/file"
 )
 
 //go:embed static/dist/*

@@ -2,11 +2,11 @@ package grpcserver
 
 import (
 	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
-	"github.com/n-creativesystem/api-rbac/infra"
-	"github.com/n-creativesystem/api-rbac/infra/dao"
-	"github.com/n-creativesystem/api-rbac/logger"
-	"github.com/n-creativesystem/api-rbac/proto"
-	"github.com/n-creativesystem/api-rbac/service"
+	"github.com/n-creativesystem/rbnc/infra"
+	"github.com/n-creativesystem/rbnc/infra/dao"
+	"github.com/n-creativesystem/rbnc/logger"
+	"github.com/n-creativesystem/rbnc/proto"
+	"github.com/n-creativesystem/rbnc/service"
 	"google.golang.org/grpc"
 )
 

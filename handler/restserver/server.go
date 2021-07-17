@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/n-creativesystem/api-rbac/domain/repository"
-	"github.com/n-creativesystem/api-rbac/logger"
+	"github.com/n-creativesystem/rbnc/domain/repository"
+	"github.com/n-creativesystem/rbnc/logger"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 )
@@ -62,11 +62,13 @@ func WithWhiteList(whitelistIp string) Option {
 	}
 }
 
-func WithUI(enabled bool, prefix string) Option {
+func WithUI(enabled bool, prefix, root string, indexes bool) Option {
 	return func(conf *config) {
 		conf.ui = webUI{
 			enabled: enabled,
 			prefix:  prefix,
+			root:    root,
+			indexes: indexes,
 		}
 	}
 }
@@ -101,7 +103,7 @@ func New(con *grpc.ClientConn, opts ...Option) *gin.Engine {
 	r := gin.New()
 	r.Use(logger.RestLogger(loggerOpts...), gin.Recovery())
 	if conf.ui.enabled {
-		fileSystem := newFileSystem(root, indexes)
+		fileSystem := newFileSystem(conf.ui.root, conf.ui.indexes)
 		r.Use(staticServe(conf.ui.prefix, fileSystem))
 	}
 	if len(conf.whiteList) > 0 {

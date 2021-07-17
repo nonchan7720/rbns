@@ -3,8 +3,8 @@ package dao
 import (
 	"errors"
 
-	"github.com/n-creativesystem/api-rbac/infra/dao/driver/mysql"
-	"github.com/n-creativesystem/api-rbac/infra/dao/driver/postgres"
+	"github.com/n-creativesystem/rbnc/infra/dao/driver/mysql"
+	"github.com/n-creativesystem/rbnc/infra/dao/driver/postgres"
 	"gorm.io/gorm"
 )
 

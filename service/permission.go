@@ -3,10 +3,10 @@ package service
 import (
 	"context"
 
-	"github.com/n-creativesystem/api-rbac/domain/model"
-	"github.com/n-creativesystem/api-rbac/domain/repository"
-	"github.com/n-creativesystem/api-rbac/proto"
-	"github.com/n-creativesystem/api-rbac/protoconv"
+	"github.com/n-creativesystem/rbnc/domain/model"
+	"github.com/n-creativesystem/rbnc/domain/repository"
+	"github.com/n-creativesystem/rbnc/proto"
+	"github.com/n-creativesystem/rbnc/protoconv"
 )
 
 type permissionService struct {
