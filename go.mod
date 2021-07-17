@@ -1,4 +1,4 @@
-module github.com/n-creativesystem/rbnc
+module github.com/n-creativesystem/rbns
 
 go 1.16
 
