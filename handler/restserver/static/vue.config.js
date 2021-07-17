@@ -3,7 +3,7 @@ module.exports = {
   pages: {
     index: {
       entry: 'src/main.js',
-      title: "Role Based Access Control"
+      title: "Role Based N Security"
     }
   },
   transpileDependencies: [
