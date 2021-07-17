@@ -10,30 +10,30 @@ env:
   REGISTRY_HOSTNAME: ghcr.io
   IMAGE_NAME: api-rback
 
-  jobs:
-    setup-build-publish:
-      name: Setup, Build, Publish
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+jobs:
+  setup-build-publish:
+    name: Setup, Build, Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-        - name: version
-          id: version
-          run: |
-            echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+      - name: version
+        id: version
+        run: |
+          echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
-        # Docker imageのビルド
-        - name: Build with Docker
-          run: |
-            VERSION=${{ steps.version.outputs.VERSION }}
-            docker build -f docker/static.dockerfile -t ${REGISTRY_HOSTNAME}/${REPOSITORY_NAMESPACE}/${IMAGE_NAME}:${VERSION}-static .
+      # Docker imageのビルド
+      - name: Build with Docker
+        run: |
+          VERSION=${{ steps.version.outputs.VERSION }}
+          docker build -f docker/static.dockerfile -t ${REGISTRY_HOSTNAME}/${REPOSITORY_NAMESPACE}/${IMAGE_NAME}:${VERSION}-static .
 
-        # ビルド済みのイメージをGithub PackagesへPush
-        - name: Push the image to Github Packages
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
-          run: |
-            VERSION=${{ steps.version.outputs.VERSION }}
-            echo $GITHUB_TOKEN | docker login $REGISTRY_HOSTNAME -u $GITHUB_ACTOR --password-stdin
-            docker push $REGISTRY_HOSTNAME/$REPOSITORY_NAMESPACE/$IMAGE_NAME:${VERSION}-static
+      # ビルド済みのイメージをGithub PackagesへPush
+      - name: Push the image to Github Packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+        run: |
+          VERSION=${{ steps.version.outputs.VERSION }}
+          echo $GITHUB_TOKEN | docker login $REGISTRY_HOSTNAME -u $GITHUB_ACTOR --password-stdin
+          docker push $REGISTRY_HOSTNAME/$REPOSITORY_NAMESPACE/$IMAGE_NAME:${VERSION}-static
