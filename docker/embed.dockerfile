@@ -1,4 +1,4 @@
-FROM node:14-alpine as frontend
+FROM node:16-alpine as frontend
 
 COPY handler/restserver/static /src/
 
