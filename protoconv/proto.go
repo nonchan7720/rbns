@@ -1,8 +1,8 @@
 package protoconv
 
 import (
-	"github.com/n-creativesystem/rbnc/domain/model"
-	"github.com/n-creativesystem/rbnc/proto"
+	"github.com/n-creativesystem/rbns/domain/model"
+	"github.com/n-creativesystem/rbns/proto"
 )
 
 func NewRoleEntityByModel(role model.Role) *proto.RoleEntity {

@@ -6,12 +6,12 @@ import (
 	"testing"
 
 	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/n-creativesystem/rbnc/domain/repository"
-	"github.com/n-creativesystem/rbnc/infra"
-	"github.com/n-creativesystem/rbnc/infra/dao"
-	"github.com/n-creativesystem/rbnc/proto"
-	"github.com/n-creativesystem/rbnc/service"
-	"github.com/n-creativesystem/rbnc/tests"
+	"github.com/n-creativesystem/rbns/domain/repository"
+	"github.com/n-creativesystem/rbns/infra"
+	"github.com/n-creativesystem/rbns/infra/dao"
+	"github.com/n-creativesystem/rbns/proto"
+	"github.com/n-creativesystem/rbns/service"
+	"github.com/n-creativesystem/rbns/tests"
 	"github.com/stretchr/testify/assert"
 )
 

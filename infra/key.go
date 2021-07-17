@@ -3,9 +3,9 @@ package infra
 import (
 	"context"
 
-	"github.com/n-creativesystem/rbnc/domain/repository"
-	"github.com/n-creativesystem/rbnc/infra/dao"
-	"github.com/n-creativesystem/rbnc/infra/entity"
+	"github.com/n-creativesystem/rbns/domain/repository"
+	"github.com/n-creativesystem/rbns/infra/dao"
+	"github.com/n-creativesystem/rbns/infra/entity"
 	"gorm.io/gorm"
 )
 

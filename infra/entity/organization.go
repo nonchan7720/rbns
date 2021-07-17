@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"github.com/n-creativesystem/rbnc/domain/model"
+	"github.com/n-creativesystem/rbns/domain/model"
 	"gorm.io/gorm"
 )
 

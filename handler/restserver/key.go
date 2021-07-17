@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/n-creativesystem/rbnc/domain/repository"
+	"github.com/n-creativesystem/rbns/domain/repository"
 )
 
 type apiKeyHandle interface {

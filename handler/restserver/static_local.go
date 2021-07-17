@@ -8,7 +8,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/n-creativesystem/rbnc/handler/restserver/internal/file"
+	"github.com/n-creativesystem/rbns/handler/restserver/internal/file"
 )
 
 const INDEX = "index.html"

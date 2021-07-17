@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"github.com/n-creativesystem/rbnc/domain/model"
+	"github.com/n-creativesystem/rbns/domain/model"
 )
 
 type User interface {

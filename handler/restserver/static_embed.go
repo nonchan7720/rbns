@@ -7,7 +7,7 @@ import (
 	"io/fs"
 	"net/http"
 
-	"github.com/n-creativesystem/rbnc/handler/restserver/internal/file"
+	"github.com/n-creativesystem/rbns/handler/restserver/internal/file"
 )
 
 //go:embed static/dist/*

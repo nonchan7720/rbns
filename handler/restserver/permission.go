@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/n-creativesystem/rbnc/proto"
+	"github.com/n-creativesystem/rbns/proto"
 	"google.golang.org/grpc"
 )
 

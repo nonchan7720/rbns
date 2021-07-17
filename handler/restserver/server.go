@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/n-creativesystem/rbnc/domain/repository"
-	"github.com/n-creativesystem/rbnc/logger"
+	"github.com/n-creativesystem/rbns/domain/repository"
+	"github.com/n-creativesystem/rbns/logger"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 )

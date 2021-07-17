@@ -1,9 +1,9 @@
 package infra
 
 import (
-	"github.com/n-creativesystem/rbnc/domain/model"
-	"github.com/n-creativesystem/rbnc/domain/repository"
-	"github.com/n-creativesystem/rbnc/infra/entity"
+	"github.com/n-creativesystem/rbns/domain/model"
+	"github.com/n-creativesystem/rbns/domain/repository"
+	"github.com/n-creativesystem/rbns/infra/entity"
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"
 )

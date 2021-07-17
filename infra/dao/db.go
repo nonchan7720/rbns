@@ -5,8 +5,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/n-creativesystem/rbnc/infra/entity"
-	"github.com/n-creativesystem/rbnc/logger"
+	"github.com/n-creativesystem/rbns/infra/entity"
+	"github.com/n-creativesystem/rbns/logger"
 	"gorm.io/gorm"
 )
 

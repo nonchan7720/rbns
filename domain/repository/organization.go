@@ -1,6 +1,6 @@
 package repository
 
-import "github.com/n-creativesystem/rbnc/domain/model"
+import "github.com/n-creativesystem/rbns/domain/model"
 
 type Organization interface {
 	FindAll() (model.Organizations, error)
