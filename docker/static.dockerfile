@@ -8,7 +8,7 @@ RUN yarn global add @vue/cli \
     && yarn install \
     && yarn build
 
-FROM golang:1.16-buster as build
+FROM golang:1.19.2-buster as build
 ENV TZ=Asia/Tokyo
 
 WORKDIR /src/
